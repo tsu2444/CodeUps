@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.about__container {
+  padding: 0;
+}
+
+.about__wrap {
+  margin-top: rem(23);
+  width: 100%;
+  aspect-ratio: 345 / 212;
+  position: relative;
+  @include mq("md") {
+    margin-top: rem(38);
+    aspect-ratio: 1080 / 661;
+  }
+}
+
+.about__images {
+  width: 100%;
+  @include mq("md") {
+  }
+}
+
+.about__img {
+  height: inherit;
+}
+
+.about__img.about__img--small {
+  width: calc((128px / 345px) * 100%);
+  position: absolute;
+  aspect-ratio: 128 / 192;
+  object-fit: cover;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  @include mq("md") {
+    aspect-ratio: 400 / 606;
+  }
+}
+
+.about__img.about__img--large {
+  width: calc((rem(281) / rem(345)) * 100%);
+  position: absolute;
+  z-index: 900;
+  aspect-ratio: 281 / 186;
+  object-fit: cover;
+  right: 0;
+  bottom: 0;
+  @include mq("md") {
+    top: rem(80);
+    aspect-ratio: 880 / 581;
+  }
+}
+
+.about-content {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.about-content.about-content--pc {
+  @include mq("md") {
+    position: relative;
+    z-index: 5000;
+    width: calc((rem(840) / rem(1080) * 100%));
+    display: flex;
+    justify-content: space-between;
+    top: 30%;
+    left: 18.5%;
+  }
+}
+
+.about-content__title {
+  font-size: rem(40);
+  line-height: calc(40 / 40);
+  color: $emerald;
+  font-weight: 500;
+  @include mq("md") {
+    color: $white;
+    width: calc((rem(400) / rem(840)) * 100%);
+    font-size: rem(80);
+    line-height: calc(rem(100) / rem(80));
+    white-space: nowrap;
+  }
+}
+
+.about-content__wrap {
+  margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(3);
+    color: $white;
+    width: calc((rem(400) / rem(840)) * 100%);
+  }
+}
+
+.about-content__text {
+  font-size: rem(16);
+  line-height: calc(rem(24) / rem(16));
+}
+
+.about__btn {
+  margin-top: rem(48);
+  margin-left: rem(-15);
+  @include mq("md") {
+    margin-top: rem(37);
+    margin-left: rem(-6);
+  }
+}
+
+.about__bg {
+  display: none;
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    // width: calc((194 / 1425) * 100%);
+    width: rem(194);
+    z-index: 2000;
+    // right: calc((100vw - 1425px + 68px) / 2);
+    right: calc((83 / 1440) * 100%);
+    bottom: rem(74);
+  }
+}
+
+.about__bg-img {
+  aspect-ratio: 194 / 181;
+  object-fit: cover;
+}

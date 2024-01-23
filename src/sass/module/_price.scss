@@ -1,0 +1,104 @@
+@use "global" as *;
+
+.price__bg {
+  display: none;
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    width: calc((rem(437) / rem(1440)) * 100%);
+    bottom: rem(60);
+    left: rem(100);
+  }
+}
+
+.price__bg-img {
+  aspect-ratio: 437 / 201;
+  object-fit: cover;
+}
+
+.price__wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: rem(26);
+  @include mq("md") {
+    flex-direction: row;
+    margin-top: rem(40);
+    justify-content: space-between;
+  }
+}
+
+.price__left {
+  width: 100%;
+  margin-top: rem(44);
+  @include mq("md") {
+    margin-top: rem(2);
+    padding-left: rem(4);
+    width: calc(rem(492) / rem(1080) * 100% + 4px);
+  }
+}
+
+.price__left-title {
+  margin-top: rem(43);
+  font-size: rem(16);
+  font-weight: bold;
+  border-bottom: rem(1) solid $emerald;
+}
+
+.price__left-title:first-child {
+  margin-top: 0;
+}
+
+.price__left dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.price__left dt,
+.price__left dd {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: calc(rem(24) / rem(14));
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.price__left dt {
+  width: 100%;
+  max-width: calc(rem(255) / rem(345) * 100%);
+  @include mq ("md") {
+    letter-spacing: 0.15em;
+  }
+}
+
+.price__left dd {
+  width: 100%;
+  max-width: calc(rem(90) / rem(345) * 100%);
+  text-align: right;
+  @include mq ("md") {
+      letter-spacing: 0.05em;
+  }
+}
+
+.price__right {
+  width: 100%;
+  @include mq("md") {
+    margin-top: rem(-2);
+    width: calc(rem(492) / rem(1080) * 100%);
+  }
+}
+
+.price__right picture {
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 746 /492;
+  }
+}
+
+.price__btn {
+  margin-top: rem(39);
+  margin-left: rem(-3);
+  @include mq("md") {
+    margin-top: rem(79);
+    margin-left: rem(-1);
+  }
+}

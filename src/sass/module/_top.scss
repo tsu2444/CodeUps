@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.top-campaign {
+  margin-top: rem(35);
+  @include mq("md") {
+    margin-top: rem(110);
+  }
+}
+
+.top-about {
+  position: relative;
+  margin-top: rem(80);
+  padding-bottom: rem(75);
+  @include mq("md") {
+    margin-top: rem(134);
+    padding-bottom: rem(164);
+    max-height: calc((rem(1080) / rem(767)) * 100vw); /* メディアクエリに応じた高さ */
+  }
+}
+
+.top-information {
+  padding-top: rem(77);
+  padding-bottom: rem(82);
+  background-color: $aquablue;
+  @include mq("md") {
+    padding-top: rem(90);
+    padding-bottom: rem(76);
+    padding-right: rem(6);
+  }
+}
+
+.top-blog {
+  padding-top: rem(77);
+  padding-bottom: rem(80);
+  position: relative;
+  z-index: 1000;
+  @include mq("md") {
+    padding-top: rem(91);
+    padding-bottom: 0;
+  }
+}
+
+.top-vice {
+  padding-top: rem(0);
+  padding-bottom: rem(83);
+  position: relative;
+  @include mq("md") {
+    padding-top: rem(134);
+    padding-bottom: rem(144);
+  }
+}
+
+.top-price {
+  padding-top: rem(77);
+  padding-bottom: rem(84);
+  background: $aquablue;
+  position: relative;
+  @include mq("md") {
+    padding-top: rem(90);
+    padding-bottom: rem(103);
+    padding-right: rem(5);
+  }
+}
+
+.top-contact {
+  padding-top: rem(80);
+  padding-bottom: rem(103);
+  position: relative;
+  @include mq("md") {
+    padding-top: rem(140);
+    padding-bottom: rem(160);
+  }
+}
+
+.top-page-top {
+  position: fixed;
+  right: rem(15);
+  bottom: rem(15);
+}
+
+.top-footer {
+  padding-top: rem(48);
+  padding-bottom: rem(56);
+  @include mq("md") {
+    padding-top: rem(78);
+    padding-bottom: rem(77);
+  }
+}

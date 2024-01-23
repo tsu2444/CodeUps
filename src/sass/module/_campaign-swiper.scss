@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.campaign-swiper {
+  position: relative;
+  margin-top: rem(27);
+  @include mq("md") {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    margin-top: rem(38);
+    padding-left: calc(rem(180) / rem(1080) * 100%);
+  }
+}
+
+
+.campaign-swiper__wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.campaign-swiper__button-wrap {
+  display: none;
+  @include mq("md") {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: rem(170);
+    top: rem(-83);
+  }
+}
+
+.campaign-swiper__button-wrap .swiper-button-prev,
+.campaign-swiper__button-wrap .swiper-button-next {
+  position: relative;
+  @include mq("md") {
+    border: solid rem(1) $emerald;
+    border-radius: 50%;
+    width: rem(80);
+    height: rem(80);
+    transition: .3s background-color;
+  }
+}
+
+.campaign-swiper__button-wrap .swiper-button-prev:hover,
+.campaign-swiper__button-wrap .swiper-button-next:hover {
+    background-color: $emerald;
+}
+
+.campaign-swiper__button-wrap .swiper-button-next {
+    margin-left: rem(100);
+  }
+
+.campaign-swiper .swiper-pagination .swiper-pagination-bullet {
+  border: 1px solid #333;
+  background: #fff9ee;
+}
+
+.campaign-swiper__button-wrap .swiper-button-prev::before,
+.campaign-swiper__button-wrap .swiper-button-next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $emerald;
+  transition: .3s background-color;
+  @include mq("md") {
+    width: rem(40);
+    height: rem(1);
+  }
+}
+
+.campaign-swiper__button-wrap .swiper-button-prev:hover::before,
+.campaign-swiper__button-wrap .swiper-button-next:hover::before {
+  background-color: #ffffff; /* ホバー時のカラーコードに置き換える */
+}
+
+.campaign-swiper__button-wrap .swiper-button-prev::after,
+.campaign-swiper__button-wrap .swiper-button-next::after {
+    position: absolute;
+    content: '';
+    width: rem(40);
+    height: rem(9);
+    border-right: solid rem(1) $emerald;
+    transform: rotate(-45deg);
+    top: 58%;
+    left:28%;
+    transition: .3s border-right;
+}
+
+.campaign-swiper__button-wrap .swiper-button-prev:hover::after,
+.campaign-swiper__button-wrap .swiper-button-next:hover::after {
+    border-right: solid rem(1) $white;
+}
+
+.campaign-swiper__button-wrap .swiper-button-prev::after {
+    transform: rotate(225deg);
+    left: 21%;
+}
+
+.campaign__swiper .swiper-button-next:after,
+.campaign__swiper .swiper-button-prev:after {
+  content: "";
+}
+
+  .campaign-swiper .swiper-pagination {
+    bottom: rem(65);
+    @include mq("md") {
+      bottom: rem(120);
+    }
+  }
+
+  .campaign-card__price-large span {
+    opacity: 0;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    width: calc(100% / 3); /* Adjust this value based on the number of slides you want visible */
+    text-align: left;
+    box-sizing: border-box;
+  }

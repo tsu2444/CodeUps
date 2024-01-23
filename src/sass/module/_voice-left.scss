@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.voice-left {
+    width: 100%;
+    max-width: calc((rem(149) / rem(313) ) * 100%);
+    @include mq ("md") {
+        padding-top: rem(24);
+        max-width: calc((rem(276) / rem(472) ) * 100%);
+    }
+}
+
+.voice-left__item {
+    display: flex;
+    flex-direction: column;
+    @include mq ("md") {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.voice-left__age {
+    margin-left: rem(-1);
+    font-size: rem(12);
+    line-height: calc(rem(18) / rem(12));
+    @include mq ("md") {
+        margin-top: rem(17);
+        margin-left: rem(-2);
+    }
+}
+
+.voice-left__label {
+    padding-top: rem(3);
+}
+
+.voice-left__label span {
+    padding: rem(6) rem(12) rem(1) rem(12);
+    border: rem(1) solid $emerald;
+    color: $emerald;
+    font-size: rem(12);
+    line-height: calc(rem(22) / rem(12) );
+    @include mq ("md") {
+        padding: rem(6) rem(16);
+    }
+}
+
+.voice-left__title {
+    margin-top: rem(7);
+    font-size: rem(16);
+    font-weight: 600;
+    line-height: calc(rem(23) / rem(16) );
+    padding-bottom: rem(2);
+    border-bottom: rem(1) solid $emerald;
+    @include mq ("md") {
+        margin-top: rem(10);
+        padding-bottom: 0;
+        font-size: rem(24);
+        line-height: calc( rem(35) / rem(24) );
+    }
+}
+

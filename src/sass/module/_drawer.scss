@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.drawer {
+  display: none;
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin-top: rem(80);
+  background-color: rgba($color: $emerald, $alpha: 1);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.drawer__menu {
+  display: flex;
+  padding: rem(19) rem(15) rem(111);
+}
+
+.drawer__right {
+  margin-left: rem(7);
+}
+
+.drawer::-webkit-scrollbar {
+  display: none;
+}
+
+.drawer__link {
+  margin-top: rem(24);
+  padding: rem(5) 0;
+  display: block;
+  font-size: rem(16);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.drawer__left .drawer__link.drawer__link--first,
+.drawer__right .drawer__link.drawer__link--first {
+  margin-top: 0;
+}
+
+.drawer__link.drawer__link--main {
+  position: relative;
+  margin-top: rem(40);
+}
+
+.drawer__link.drawer__link--main::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/hitode.png);
+  background-size: contain;
+  left: rem(-22);
+  top: 0;
+}
+
+.drawer__link-text.drawer__link-text--main {
+  font-weight: bold;
+}
+
+.drawer__item {
+  padding-left: rem(22);
+}
+
+.drawer__item.header__drawer-item--contact a::after {
+  content: "";
+  margin-bottom: prem(5);
+  margin-left: prem(20);
+  width: prem(15);
+  height: prem(15);
+  display: inline-block;
+  background-image: url(./../images/common/contact-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

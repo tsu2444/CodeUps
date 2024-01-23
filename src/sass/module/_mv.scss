@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.mv {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    max-height: rem(600);
+    min-height: rem(400);
+    @include mq ("md") {
+        max-height: none;
+    }
+}
+
+.mv__inner {
+    height: inherit;
+    min-height: inherit;
+}
+
+.mv__title-wrap {
+    position: absolute;
+    z-index: 2;
+    top: 49%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    @include mq ("md") {
+        top: 50%;
+        left: 51.5%;
+    }
+}
+
+.mv__main-title {
+    font-size: rem(40);
+    letter-spacing: 0.53em;
+    font-family: 'Lato', sans-serif;
+    @include mq(md){
+        line-height: calc(rem(100) / rem(80));
+        font-size: rem(80);
+    }
+}
+
+.mv__sub-title {
+    margin-top: rem(-7);
+    margin-left: rem(-25);
+    font-size: rem(20);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(-44);
+        font-size: rem(20);
+    }
+}
+
+.mv__swiper,
+.mv__swiper .swiper-img,
+.mv__swiper .swiper-img img {
+    height: inherit;
+    min-height: inherit;
+}
+
+.mv__swiper .swiper-img img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 375 / 667;
+    max-height: rem(600);
+    @include mq ("md") {
+        aspect-ratio: 1440 / 768;
+        max-height: none;
+    }
+}

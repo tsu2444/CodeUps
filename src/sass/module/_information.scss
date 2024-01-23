@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.information__wrap {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(37);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.information__item {
+  @include mq("md") {
+    width: calc((rem(540) / rem(1080)) * 100%);
+  }
+}
+
+.information__img {
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+}
+
+.information-content {
+  margin-top: rem(28);
+  @include mq("md") {
+    margin-top: rem(-2);
+    margin-right: rem(-1);
+    width: calc((rem(492) / rem(1080)) * 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.information-content__title {
+  font-size: rem(20);
+  font-weight: bold;
+  line-height: calc(rem(24) / rem(20));
+  padding-bottom: rem(0);
+  border-bottom: rem(1) solid $emerald;
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.information-content__text {
+  margin-top: rem(11);
+  padding-right: rem(2);
+  font-size: rem(16);
+  line-height: calc(rem(24) / rem(16));
+  letter-spacing: rem(0.1);
+  @include mq("md") {
+    padding-right: rem(1);
+    font-size: rem(16);
+  }
+}
+
+.information-content__btn {
+  margin-top: rem(37);
+  margin-left: rem(-3);
+  @include mq("md") {
+    margin-left: rem(-6);
+  }
+}
